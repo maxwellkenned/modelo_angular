@@ -1,29 +1,16 @@
-<h3>
-  Angular 2 Seed
-</h3>
 <nav>
-	<a [routerLink]="['/']">
-    Home
-  </a>
-  |
-	<a [routerLink]="['/about']">
-    About
-  </a>
-  |
-	<a [routerLink]="['/github', 'angular']">
-    Github Repos
-  </a>
-  |
-	<a [routerLink]="['/contact']">
-    Contact Us
-  </a>
+  <div class="nav-wrapper blue">
+    <div class="container">
+      <a [routerLink]="['/']" class="brand-logo">SiteComAngular2</a>
+      <ul class="right">
+        <li [routerLinkActive]="['active']" ><a  [routerLink]="['/home']">Home</a></li>
+        <li [routerLinkActive]="['active']" ><a  [routerLink]="['/entrar']">Entrar</a></li>
+        <li [routerLinkActive]="['active']" ><a  [routerLink]="['/cadastro']">Cadastro</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <main>
 	<router-outlet></router-outlet>
 </main>
-
-
-<footer>
-  © 2017
-</footer>

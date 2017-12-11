@@ -1,0 +1,32 @@
+{
+  "name": "modelo2",
+  "description": "A simple starter Angular2 project",
+  "main": "src/index.html",
+  "authors": [
+    "Maxwell Kenned <kenned123@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Angular2",
+    "angular2-seed",
+    "official",
+    "angular",
+    "2",
+    "seed",
+    "official",
+    "angular2",
+    "seed"
+  ],
+  "homepage": "https://github.com/angular/angular2-seed",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.100.2"
+  }
+}
