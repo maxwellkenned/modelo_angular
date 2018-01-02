@@ -6,10 +6,12 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class WebService{
+  private urlWB = "http://webserviceceu2.herokuapp.com";
+  private urlLH = "http://localhost:8000";
   private headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'application/x-www-form-urlencoded' });
-  private urlCadastro = 'http://localhost:8000/api/cadastro/';
-  private urlLogin = 'http://localhost:8000/api/login/';
-  private urlNoticia = 'http://localhost:8000/api/noticias?api_token=';
+  private urlCadastro = this.urlWB+'/api/cadastro/';
+  private urlLogin = this.urlWB+'/api/login/';
+  private urlNoticia = this.urlWB+'/api/noticias?api_token=';
 
   constructor(private http:Http){}
 
