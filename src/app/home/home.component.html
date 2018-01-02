@@ -2,11 +2,12 @@
   <h3 class="center">Home</h3>
   <p class="center">Página principal</p>
   <div class="row">
-    <card titulo="Título 1" descricao="Descrição 1" link="entrar" cardClass="col s12 m4" imagem="http://materializecss.com/images/sample-1.jpg" ></card>
-    <card titulo="Título 2" descricao="Descrição 2" link="entrar" cardClass="col s12 m4" imagem="http://materializecss.com/images/sample-1.jpg" ></card>
-    <card titulo="Título 3" descricao="Descrição 3" link="entrar" cardClass="col s12 m4" imagem="http://materializecss.com/images/sample-1.jpg" ></card>
-    <card titulo="Título 4" descricao="Descrição 4" link="entrar" cardClass="col s12 m4" imagem="http://materializecss.com/images/sample-1.jpg" ></card>
-    <card titulo="Título 5" descricao="Descrição 5" link="entrar" cardClass="col s12 m4" imagem="http://materializecss.com/images/sample-1.jpg" ></card>
-    <card titulo="Título 6" descricao="Descrição 6" link="entrar" cardClass="col s12 m4" imagem="http://materializecss.com/images/sample-1.jpg" ></card>
+    <card *ngFor="let noticia of noticias"
+      titulo="{{noticia.titulo}}"
+      descricao="{{noticia.descricao}}"
+      link="{{noticia.link}}"
+      cardClass="col s12 m4"
+      imagem="{{noticia.imagem}}" >
+    </card>
   </div>
 </div>

@@ -9,6 +9,7 @@ export class WebService{
   private headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'application/x-www-form-urlencoded' });
   private urlCadastro = 'http://localhost:8000/api/cadastro/';
   private urlLogin = 'http://localhost:8000/api/login/';
+  private urlNoticia = 'http://localhost:8000/api/noticias?api_token=';
 
   constructor(private http:Http){}
 
@@ -24,5 +25,25 @@ export class WebService{
     return this.http
     .post(this.urlLogin, body, this.headers)
     .toPromise().then(res=>res.json());
+  }
+
+  getNoticia(token: string){
+    return this.http
+    .get(this.urlNoticia+token)
+    .toPromise().then(res=>res.json());
+  }
+
+  setUsuario(usuario){
+    window.localStorage.setItem('usuarioNome', usuario.nome);
+    window.localStorage.setItem('usuarioEmail', usuario.email);
+    window.localStorage.setItem('usuarioToken', usuario.token);
+  }
+
+  getUsuario(){
+    return {
+      nome: window.localStorage.getItem('usuarioNome'),
+      email: window.localStorage.getItem('usuarioEmail'),
+      token: window.localStorage.getItem('usuarioToken')
+    }
   }
 }

@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+
 import { WebService } from '../laravel.service';
 
 @Component({
@@ -8,7 +10,7 @@ import { WebService } from '../laravel.service';
 })
 export class Entrar {
 
-  constructor(private webService: WebService){}
+  constructor(private webService: WebService, private route: Router){}
   private login = {email:'', senha:''};
   private msg = '';
 
@@ -18,8 +20,12 @@ export class Entrar {
     .then(function(retorno){
       if(retorno.status){
         console.log(retorno.data);
+        self.login = {email:'', senha:''};
+        self.webService.setUsuario({nome:retorno.data.name, email:retorno.data.email, token:retorno.data.api_token});
+        self.route.navigateByUrl('home');
       } else{
         console.log(retorno.data);
+        self.msg = retorno.data;
       }
     });
   }
