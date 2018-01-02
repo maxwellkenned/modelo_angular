@@ -26582,7 +26582,7 @@ __webpack_require__(336);
 var WebService = (function () {
     function WebService(http) {
         this.http = http;
-        this.urlWB = "http://webserviceceu2.herokuapp.com";
+        this.urlWB = "https://webserviceceu2.herokuapp.com";
         this.urlLH = "http://localhost:8000";
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json', 'Accept': 'application/x-www-form-urlencoded' });
         this.urlCadastro = this.urlWB + '/api/cadastro/';

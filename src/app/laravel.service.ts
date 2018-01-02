@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class WebService{
-  private urlWB = "http://webserviceceu2.herokuapp.com";
+  private urlWB = "https://webserviceceu2.herokuapp.com";
   private urlLH = "http://localhost:8000";
   private headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'application/x-www-form-urlencoded' });
   private urlCadastro = this.urlWB+'/api/cadastro/';
