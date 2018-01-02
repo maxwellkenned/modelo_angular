@@ -26582,10 +26582,12 @@ __webpack_require__(336);
 var WebService = (function () {
     function WebService(http) {
         this.http = http;
+        this.urlWB = "http://webserviceceu2.herokuapp.com";
+        this.urlLH = "http://localhost:8000";
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json', 'Accept': 'application/x-www-form-urlencoded' });
-        this.urlCadastro = 'http://localhost:8000/api/cadastro/';
-        this.urlLogin = 'http://localhost:8000/api/login/';
-        this.urlNoticia = 'http://localhost:8000/api/noticias?api_token=';
+        this.urlCadastro = this.urlWB + '/api/cadastro/';
+        this.urlLogin = this.urlWB + '/api/login/';
+        this.urlNoticia = this.urlWB + '/api/noticias?api_token=';
     }
     WebService.prototype.cadastro = function (name, email, password) {
         var body = { name: name, email: email, password: password };
