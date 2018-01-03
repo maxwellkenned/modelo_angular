@@ -9,8 +9,8 @@ export class WebService{
   private urlWB = "https://webserviceceu2.herokuapp.com";
   private urlLH = "http://localhost:8000";
   private headers = new Headers({ 'Content-Type': 'application/json', 'Accept': 'application/x-www-form-urlencoded' });
-  private urlCadastro = this.urlWB+'/api/cadastro/';
-  private urlLogin = this.urlWB+'/api/login/';
+  private urlCadastro = this.urlWB+'/api/cadastro';
+  private urlLogin = this.urlWB+'/api/login';
   private urlNoticia = this.urlWB+'/api/noticias?api_token=';
 
   constructor(private http:Http){}
