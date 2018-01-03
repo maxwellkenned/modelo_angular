@@ -26585,8 +26585,8 @@ var WebService = (function () {
         this.urlWB = "https://webserviceceu2.herokuapp.com";
         this.urlLH = "http://localhost:8000";
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json', 'Accept': 'application/x-www-form-urlencoded' });
-        this.urlCadastro = this.urlWB + '/api/cadastro/';
-        this.urlLogin = this.urlWB + '/api/login/';
+        this.urlCadastro = this.urlWB + '/api/cadastro';
+        this.urlLogin = this.urlWB + '/api/login';
         this.urlNoticia = this.urlWB + '/api/noticias?api_token=';
     }
     WebService.prototype.cadastro = function (name, email, password) {
@@ -73167,7 +73167,7 @@ module.exports = "<div class=\"{{ cardClass }}\">\r\n  <div class=\"card\">\r\n 
 /* 330 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <h3 class=\"center\">Entrar</h3>\r\n  <div class=\"row\">\r\n    <p class=\"center\">{{msg}}</p>\r\n    <form>\r\n      <div class=\"input-field col s12 m12\">\r\n        <input type=\"email\" id=\"email\" [(ngModel)]=\"login.email\" name=\"email\" class=\"validate\">\r\n        <label for=\"email\">E-Mail</label>\r\n      </div>\r\n      <div class=\"input-field col s12 m12\">\r\n        <input type=\"password\" name=\"senha\" id=\"senha\" [(ngModel)]=\"login.senha\" class=\"validate\" min=6>\r\n        <label for=\"senha\">Senha</label>\r\n      </div>\r\n      <button (click)=\"getLogin()\" class=\"btn blue right\">Entrar</button>\r\n    </form>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <h3 class=\"center\">Entrar</h3>\r\n  <div class=\"row\">\r\n    <p class=\"center\">{{msg}}</p>\r\n    <form>\r\n      <div class=\"input-field col s12 m12\">\r\n        <input type=\"email\" id=\"email\" [(ngModel)]=\"login.email\" name=\"email\" class=\"validate\">\r\n        <label for=\"email\">E-Mail</label>\r\n      </div>\r\n      <div class=\"input-field col s12 m12\">\r\n        <input type=\"password\" name=\"senha\" id=\"senha\" [(ngModel)]=\"login.senha\" class=\"validate\" autocomplete=\"current-password\">\r\n        <label for=\"senha\">Senha</label>\r\n      </div>\r\n      <button (click)=\"getLogin()\" class=\"btn blue right\">Entrar</button>\r\n    </form>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 /* 331 */

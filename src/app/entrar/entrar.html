@@ -8,7 +8,7 @@
         <label for="email">E-Mail</label>
       </div>
       <div class="input-field col s12 m12">
-        <input type="password" name="senha" id="senha" [(ngModel)]="login.senha" class="validate" min=6>
+        <input type="password" name="senha" id="senha" [(ngModel)]="login.senha" class="validate" autocomplete="current-password">
         <label for="senha">Senha</label>
       </div>
       <button (click)="getLogin()" class="btn blue right">Entrar</button>
